@@ -1,0 +1,15 @@
+1  procedure BFS(Graph,vertex):
+2      create a queue Queue
+3      enqueue vertex onto Queue
+4      mark vertex
+5      while Queue is not empty:
+6          t ← Queue.dequeue()
+7          if t is what we are looking for:
+8              return t
+9          for all edges e in Graph.adjacentEdges(t) do
+12             u ← Graph.adjacentVertex(t,e)
+13             if u is not marked:
+14                  mark u
+15                  enqueue u onto Queue
+16     return none
+

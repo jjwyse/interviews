@@ -1,0 +1,15 @@
+Waterfall model
+
+
+The activities of the software development process represented in the waterfall model. There are several other models to represent this process.
+Main article: Waterfall model
+
+The waterfall model shows a process, where developers are to follow these phases in order:
+
+Requirements specification (Requirements analysis)
+Software design
+Implementation and Integration
+Testing (or Validation)
+Deployment (or Installation)
+Maintenance
+
