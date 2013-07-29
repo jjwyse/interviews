@@ -1,39 +1,61 @@
 package com.jjw.interviews.trees;
 
-public class TreeNode
+public class TreeNode<SomeNumber extends Integer>
 {
-    private TreeNode myLeft;
-    private TreeNode myRight;
+   private TreeNode myLeft;
+   private TreeNode myRight;
+   private SomeNumber myValue;
 
-    /**
-     * @return the left
-     */
-    public TreeNode getLeft()
-    {
-        return myLeft;
-    }
+   public TreeNode(SomeNumber o)
+   {
+      myValue = o;
+   }
 
-    /**
-     * @param left the left to set
-     */
-    public void setLeft(TreeNode left)
-    {
-        myLeft = left;
-    }
+   /**
+    * @return the left
+    */
+   public TreeNode getLeft()
+   {
+      return myLeft;
+   }
 
-    /**
-     * @return the right
-     */
-    public TreeNode getRight()
-    {
-        return myRight;
-    }
+   /**
+    * @param left the left to set
+    */
+   public void setLeft(TreeNode left)
+   {
+      myLeft = left;
+   }
 
-    /**
-     * @param right the right to set
-     */
-    public void setRight(TreeNode right)
-    {
-        myRight = right;
-    }
+   /**
+    * @return the right
+    */
+   public TreeNode getRight()
+   {
+      return myRight;
+   }
+
+   /**
+    * @param right the right to set
+    */
+   public void setRight(TreeNode right)
+   {
+      myRight = right;
+   }
+
+   /**
+    * @return the value
+    */
+   public SomeNumber getValue()
+   {
+      return myValue;
+   }
+
+   /**
+    * @param value the value to set
+    */
+   public void setValue(SomeNumber value)
+   {
+      myValue = value;
+   }
 }
