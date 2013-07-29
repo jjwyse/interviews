@@ -1,4 +1,4 @@
-package com.jjw.sandbox.interview;
+package com.jjw.interviews;
 
 import org.junit.Test;
 
