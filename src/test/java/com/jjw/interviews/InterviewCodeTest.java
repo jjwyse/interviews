@@ -1,15 +1,15 @@
 package com.jjw.interviews;
 
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
-import com.jjw.interviews.InterviewCode;
+import org.junit.Test;
 
 public class InterviewCodeTest
 {
     @Test
-    public void test()
+    public void testIsUniqueChar()
     {
         InterviewCode interviewCode = new InterviewCode();
-        assert (interviewCode.isUniqueChars("abcdefg13"));
+        assertTrue(interviewCode.isUniqueChars("abcdefg13"));
     }
 }
