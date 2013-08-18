@@ -70,6 +70,8 @@ public class ArrayMethodsTest
             System.out.print(c);
         }
         System.out.println();
+        String resultString = new String(result);
+        assertTrue("ab%20cd%20efg".equals(resultString));
     }
 
     @Test
@@ -79,5 +81,6 @@ public class ArrayMethodsTest
         System.out.println("before: " + one);
         String result = arrays.compress(one);
         System.out.println("after: " + result);
+        assertTrue("a3b2c1a4b2a1b4".equals(result));
     }
 }

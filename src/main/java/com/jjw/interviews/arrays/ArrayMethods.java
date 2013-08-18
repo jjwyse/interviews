@@ -107,7 +107,7 @@ public class ArrayMethods
         {
             if (chars[i] == space)
             {
-                shift(chars, i);
+                shift(chars, i, 2);
                 chars[i] = '%';
                 chars[i + 1] = '2';
                 chars[i + 2] = '0';
@@ -120,14 +120,16 @@ public class ArrayMethods
     /**
      * Shifts ever element from chars[index]-> end ++2
      * 
+     * Assumption: there's enough space in chars to shift things.
+     * 
      * @param chars
      * @param index
      */
-    private void shift(char[] chars, int index)
+    private void shift(char[] chars, int index, int spaces)
     {
-        for (int i = chars.length - 3; i >= index; i--)
+        for (int i = chars.length - 1 - spaces; i >= index; i--)
         {
-            chars[i + 2] = chars[i];
+            chars[i + spaces] = chars[i];
         }
     }
 
