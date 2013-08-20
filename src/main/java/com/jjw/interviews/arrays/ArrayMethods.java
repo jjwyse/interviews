@@ -6,7 +6,8 @@ import java.util.HashSet;
 public class ArrayMethods
 {
     /**
-     * Assumption: we know how many characters are in the character set
+     * Assumption: we know how many characters are in the character set. If we don't, check out the isUniqueChars2
+     * method below which uses a hash set to check for collisions
      * 
      * @param string
      * @return
