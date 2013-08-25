@@ -175,4 +175,39 @@ public class ArrayMethods
         }
         return counter;
     }
+
+    /**
+     * Rotates a 2-D array of integers 90 degrees clockwise
+     * 
+     * @param matrix The 2-D array to rotate
+     */
+    public void rotate(int[][] matrix)
+    {
+        for (int layer = 0; layer < matrix.length / 2; layer++)
+        {
+            int first = layer;
+            int last = matrix.length - 1 - layer;
+            System.out.println("first: " + first + ", last: " + last);
+            for (int i = first; i < last; i++)
+            {
+                int offset = i - first;
+                System.out.println("offset: " + offset);
+
+                // save top
+                int top = matrix[first][i];
+
+                // left to top
+                matrix[first][i] = matrix[last - offset][first];
+
+                // bottom to left
+                matrix[last - offset][first] = matrix[last][last - offset];
+
+                // right to bottom
+                matrix[last][last - offset] = matrix[i][last];
+
+                // top to right
+                matrix[i][last] = top;
+            }
+        }
+    }
 }
