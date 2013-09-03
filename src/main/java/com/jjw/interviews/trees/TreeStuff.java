@@ -42,6 +42,16 @@ public class TreeStuff
         }
     }
 
+    private static int checkHeightSlower(TreeNode node)
+    {
+        if (node == null)
+        {
+            return 0; // height of 0
+        }
+
+        return Math.max(checkHeightSlower(node.getLeft()), checkHeightSlower(node.getRight())) + 1;
+    }
+
     /**
      * Utilizes our check height function to determine if a tree is balanced. In this case, a balanced tree is defined
      * to be a tree such taht the heights of the two subtrees of any node never differe by more than one.
@@ -56,6 +66,23 @@ public class TreeStuff
             return false;
         }
         return true;
+    }
+
+    public static boolean isBalancedSlower(TreeNode root)
+    {
+        if (root == null)
+        {
+            return true;
+        }
+
+        if (Math.abs(checkHeightSlower(root.getLeft()) - checkHeightSlower(root.getRight())) > 1)
+        {
+            return false;
+        }
+        else
+        {
+            return isBalancedSlower(root.getLeft()) && isBalancedSlower(root.getRight());
+        }
     }
 
     /**
