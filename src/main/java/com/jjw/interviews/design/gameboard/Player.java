@@ -14,7 +14,7 @@ public class Player
 
     public int roll()
     {
-        return myRandom.nextInt(6);
+        return myRandom.nextInt(6) + 1;
     }
 
     /**

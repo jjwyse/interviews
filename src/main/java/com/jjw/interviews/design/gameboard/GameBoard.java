@@ -1,5 +1,6 @@
 package com.jjw.interviews.design.gameboard;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameBoard
@@ -7,9 +8,11 @@ public class GameBoard
     private List<Space> mySpaces;
     private List<Player> myPlayers;
 
-    public GameBoard(int width, int height, int numberOfPlayers)
+    public GameBoard(int numberOfSpaces, int numberOfPlayers)
     {
-        int numberOfSpaces = width * height;
+        mySpaces = new ArrayList<Space>();
+        myPlayers = new ArrayList<Player>();
+
         for (int i = 0; i < numberOfSpaces; i++)
         {
             mySpaces.add(new Space(SpaceType.GAME_OVER));
